@@ -1,0 +1,529 @@
+.
+├── assets
+│   └── api
+│       ├── docker
+│       │   ├── admin_autocomplite.png
+│       │   ├── auth.png
+│       │   ├── create_token.png
+│       │   ├── docker-start-api.png
+│       │   ├── get_dev.png
+│       │   ├── get.png
+│       │   └── post_device.png
+│       └── local
+│           └── autocomplete.png
+├── config
+│   ├── asgi.py
+│   ├── config.py
+│   ├── docs.py
+│   ├── essentials.py
+│   ├── gunicorn.conf.py
+│   ├── __init__.py
+│   ├── logginf_conf.py
+│   ├── __pycache__
+│   │   ├── config.cpython-312.pyc
+│   │   ├── docs.cpython-312.pyc
+│   │   ├── essentials.cpython-312.pyc
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── logginf_conf.cpython-312.pyc
+│   │   ├── settings.cpython-312.pyc
+│   │   ├── urls.cpython-312.pyc
+│   │   └── wsgi.cpython-312.pyc
+│   ├── settings.py
+│   ├── swagger
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   └── schema.cpython-312.pyc
+│   │   └── schema.py
+│   ├── urls.py
+│   └── wsgi.py
+├── devices
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── management
+│   │   ├── commands
+│   │   │   ├── csu.py
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       ├── csu.cpython-312.pyc
+│   │   │       └── __init__.cpython-312.pyc
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       └── __init__.cpython-312.pyc
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_alter_device_options_alter_devicemodel_options.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-312.pyc
+│   │       ├── 0002_alter_device_options_alter_devicemodel_options.cpython-312.pyc
+│   │       └── __init__.cpython-312.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-312.pyc
+│   │   ├── apps.cpython-312.pyc
+│   │   ├── forms.cpython-312.pyc
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── models.cpython-312.pyc
+│   │   ├── serializers.cpython-312.pyc
+│   │   ├── urls.cpython-312.pyc
+│   │   └── views.cpython-312.pyc
+│   ├── serializers.py
+│   ├── static
+│   │   ├── admin
+│   │   │   ├── css
+│   │   │   │   ├── autocomplete.css
+│   │   │   │   ├── base.css
+│   │   │   │   ├── changelists.css
+│   │   │   │   ├── dadata_suggestions.css
+│   │   │   │   ├── dark_mode.css
+│   │   │   │   ├── dashboard.css
+│   │   │   │   ├── forms.css
+│   │   │   │   ├── login.css
+│   │   │   │   ├── nav_sidebar.css
+│   │   │   │   ├── responsive.css
+│   │   │   │   ├── responsive_rtl.css
+│   │   │   │   ├── rtl.css
+│   │   │   │   ├── unusable_password_field.css
+│   │   │   │   ├── vendor
+│   │   │   │   │   └── select2
+│   │   │   │   │       ├── LICENSE-SELECT2.md
+│   │   │   │   │       ├── select2.css
+│   │   │   │   │       └── select2.min.css
+│   │   │   │   └── widgets.css
+│   │   │   ├── img
+│   │   │   │   ├── calendar-icons.svg
+│   │   │   │   ├── gis
+│   │   │   │   │   ├── move_vertex_off.svg
+│   │   │   │   │   └── move_vertex_on.svg
+│   │   │   │   ├── icon-addlink.svg
+│   │   │   │   ├── icon-alert.svg
+│   │   │   │   ├── icon-calendar.svg
+│   │   │   │   ├── icon-changelink.svg
+│   │   │   │   ├── icon-clock.svg
+│   │   │   │   ├── icon-deletelink.svg
+│   │   │   │   ├── icon-hidelink.svg
+│   │   │   │   ├── icon-no.svg
+│   │   │   │   ├── icon-unknown-alt.svg
+│   │   │   │   ├── icon-unknown.svg
+│   │   │   │   ├── icon-viewlink.svg
+│   │   │   │   ├── icon-yes.svg
+│   │   │   │   ├── inline-delete.svg
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── README.txt
+│   │   │   │   ├── search.svg
+│   │   │   │   ├── selector-icons.svg
+│   │   │   │   ├── sorting-icons.svg
+│   │   │   │   ├── tooltag-add.svg
+│   │   │   │   └── tooltag-arrowright.svg
+│   │   │   └── js
+│   │   │       ├── actions.js
+│   │   │       ├── admin
+│   │   │       │   ├── DateTimeShortcuts.js
+│   │   │       │   └── RelatedObjectLookups.js
+│   │   │       ├── autocomplete.js
+│   │   │       ├── calendar.js
+│   │   │       ├── cancel.js
+│   │   │       ├── change_form.js
+│   │   │       ├── core.js
+│   │   │       ├── dadata_suggestions.js
+│   │   │       ├── filters.js
+│   │   │       ├── inlines.js
+│   │   │       ├── jquery.init.js
+│   │   │       ├── nav_sidebar.js
+│   │   │       ├── popup_response.js
+│   │   │       ├── prepopulate_init.js
+│   │   │       ├── prepopulate.js
+│   │   │       ├── SelectBox.js
+│   │   │       ├── SelectFilter2.js
+│   │   │       ├── theme.js
+│   │   │       ├── unusable_password_field.js
+│   │   │       ├── urlify.js
+│   │   │       └── vendor
+│   │   │           ├── jquery
+│   │   │           │   ├── jquery.js
+│   │   │           │   ├── jquery.min.js
+│   │   │           │   └── LICENSE.txt
+│   │   │           ├── select2
+│   │   │           │   ├── i18n
+│   │   │           │   │   ├── af.js
+│   │   │           │   │   ├── ar.js
+│   │   │           │   │   ├── az.js
+│   │   │           │   │   ├── bg.js
+│   │   │           │   │   ├── bn.js
+│   │   │           │   │   ├── bs.js
+│   │   │           │   │   ├── ca.js
+│   │   │           │   │   ├── cs.js
+│   │   │           │   │   ├── da.js
+│   │   │           │   │   ├── de.js
+│   │   │           │   │   ├── dsb.js
+│   │   │           │   │   ├── el.js
+│   │   │           │   │   ├── en.js
+│   │   │           │   │   ├── es.js
+│   │   │           │   │   ├── et.js
+│   │   │           │   │   ├── eu.js
+│   │   │           │   │   ├── fa.js
+│   │   │           │   │   ├── fi.js
+│   │   │           │   │   ├── fr.js
+│   │   │           │   │   ├── gl.js
+│   │   │           │   │   ├── he.js
+│   │   │           │   │   ├── hi.js
+│   │   │           │   │   ├── hr.js
+│   │   │           │   │   ├── hsb.js
+│   │   │           │   │   ├── hu.js
+│   │   │           │   │   ├── hy.js
+│   │   │           │   │   ├── id.js
+│   │   │           │   │   ├── is.js
+│   │   │           │   │   ├── it.js
+│   │   │           │   │   ├── ja.js
+│   │   │           │   │   ├── ka.js
+│   │   │           │   │   ├── km.js
+│   │   │           │   │   ├── ko.js
+│   │   │           │   │   ├── lt.js
+│   │   │           │   │   ├── lv.js
+│   │   │           │   │   ├── mk.js
+│   │   │           │   │   ├── ms.js
+│   │   │           │   │   ├── nb.js
+│   │   │           │   │   ├── ne.js
+│   │   │           │   │   ├── nl.js
+│   │   │           │   │   ├── pl.js
+│   │   │           │   │   ├── ps.js
+│   │   │           │   │   ├── pt-BR.js
+│   │   │           │   │   ├── pt.js
+│   │   │           │   │   ├── ro.js
+│   │   │           │   │   ├── ru.js
+│   │   │           │   │   ├── sk.js
+│   │   │           │   │   ├── sl.js
+│   │   │           │   │   ├── sq.js
+│   │   │           │   │   ├── sr-Cyrl.js
+│   │   │           │   │   ├── sr.js
+│   │   │           │   │   ├── sv.js
+│   │   │           │   │   ├── th.js
+│   │   │           │   │   ├── tk.js
+│   │   │           │   │   ├── tr.js
+│   │   │           │   │   ├── uk.js
+│   │   │           │   │   ├── vi.js
+│   │   │           │   │   ├── zh-CN.js
+│   │   │           │   │   └── zh-TW.js
+│   │   │           │   ├── LICENSE.md
+│   │   │           │   ├── select2.full.js
+│   │   │           │   └── select2.full.min.js
+│   │   │           └── xregexp
+│   │   │               ├── LICENSE.txt
+│   │   │               ├── xregexp.js
+│   │   │               └── xregexp.min.js
+│   │   └── rest_framework
+│   │       ├── css
+│   │       │   ├── bootstrap.min.css
+│   │       │   ├── bootstrap.min.css.map
+│   │       │   ├── bootstrap-theme.min.css
+│   │       │   ├── bootstrap-theme.min.css.map
+│   │       │   ├── bootstrap-tweaks.css
+│   │       │   ├── default.css
+│   │       │   ├── font-awesome-4.0.3.css
+│   │       │   └── prettify.css
+│   │       ├── docs
+│   │       │   ├── css
+│   │       │   │   ├── base.css
+│   │       │   │   ├── highlight.css
+│   │       │   │   └── jquery.json-view.min.css
+│   │       │   ├── img
+│   │       │   │   ├── favicon.ico
+│   │       │   │   └── grid.png
+│   │       │   └── js
+│   │       │       ├── api.js
+│   │       │       ├── highlight.pack.js
+│   │       │       └── jquery.json-view.min.js
+│   │       ├── fonts
+│   │       │   ├── fontawesome-webfont.eot
+│   │       │   ├── fontawesome-webfont.svg
+│   │       │   ├── fontawesome-webfont.ttf
+│   │       │   ├── fontawesome-webfont.woff
+│   │       │   ├── glyphicons-halflings-regular.eot
+│   │       │   ├── glyphicons-halflings-regular.svg
+│   │       │   ├── glyphicons-halflings-regular.ttf
+│   │       │   ├── glyphicons-halflings-regular.woff
+│   │       │   └── glyphicons-halflings-regular.woff2
+│   │       ├── img
+│   │       │   ├── glyphicons-halflings.png
+│   │       │   ├── glyphicons-halflings-white.png
+│   │       │   └── grid.png
+│   │       └── js
+│   │           ├── ajax-form.js
+│   │           ├── bootstrap.min.js
+│   │           ├── coreapi-0.1.1.js
+│   │           ├── csrf.js
+│   │           ├── default.js
+│   │           ├── jquery-3.7.1.min.js
+│   │           ├── load-ajax-form.js
+│   │           └── prettify-min.js
+│   ├── templates
+│   │   └── admin
+│   │       └── devices
+│   │           └── device
+│   │               └── change_form.html
+│   ├── urls.py
+│   ├── utils
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── create_jwt_token.cpython-312.pyc
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   └── validtors.cpython-312.pyc
+│   │   └── validtors.py
+│   └── views.py
+├── docker-compose.yml
+├── Dockerfile
+├── Makefile
+├── manage.py
+├── poetry.lock
+├── pyproject.toml
+├── pytest.ini
+├── README.md
+├── registration
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_alter_usermodel_username.py
+│   │   ├── 0003_alter_usermodel_username.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-312.pyc
+│   │       ├── 0002_alter_usermodel_username.cpython-312.pyc
+│   │       ├── 0003_alter_usermodel_username.cpython-312.pyc
+│   │       └── __init__.cpython-312.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-312.pyc
+│   │   ├── apps.cpython-312.pyc
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── models.cpython-312.pyc
+│   │   ├── serializers.cpython-312.pyc
+│   │   ├── signals.cpython-312.pyc
+│   │   ├── tests.cpython-312.pyc
+│   │   ├── urls.cpython-312.pyc
+│   │   ├── utils.cpython-312.pyc
+│   │   └── views.cpython-312.pyc
+│   ├── serializers.py
+│   ├── urls.py
+│   ├── utils.py
+│   └── views.py
+├── start_local.sh
+├── start.py
+├── static
+├── staticfiles
+│   ├── admin
+│   │   ├── css
+│   │   │   ├── autocomplete.css
+│   │   │   ├── base.css
+│   │   │   ├── changelists.css
+│   │   │   ├── dadata_suggestions.css
+│   │   │   ├── dark_mode.css
+│   │   │   ├── dashboard.css
+│   │   │   ├── forms.css
+│   │   │   ├── login.css
+│   │   │   ├── nav_sidebar.css
+│   │   │   ├── responsive.css
+│   │   │   ├── responsive_rtl.css
+│   │   │   ├── rtl.css
+│   │   │   ├── unusable_password_field.css
+│   │   │   ├── vendor
+│   │   │   │   └── select2
+│   │   │   │       ├── LICENSE-SELECT2.md
+│   │   │   │       ├── select2.css
+│   │   │   │       └── select2.min.css
+│   │   │   └── widgets.css
+│   │   ├── img
+│   │   │   ├── calendar-icons.svg
+│   │   │   ├── gis
+│   │   │   │   ├── move_vertex_off.svg
+│   │   │   │   └── move_vertex_on.svg
+│   │   │   ├── icon-addlink.svg
+│   │   │   ├── icon-alert.svg
+│   │   │   ├── icon-calendar.svg
+│   │   │   ├── icon-changelink.svg
+│   │   │   ├── icon-clock.svg
+│   │   │   ├── icon-deletelink.svg
+│   │   │   ├── icon-hidelink.svg
+│   │   │   ├── icon-no.svg
+│   │   │   ├── icon-unknown-alt.svg
+│   │   │   ├── icon-unknown.svg
+│   │   │   ├── icon-viewlink.svg
+│   │   │   ├── icon-yes.svg
+│   │   │   ├── inline-delete.svg
+│   │   │   ├── LICENSE
+│   │   │   ├── README.txt
+│   │   │   ├── search.svg
+│   │   │   ├── selector-icons.svg
+│   │   │   ├── sorting-icons.svg
+│   │   │   ├── tooltag-add.svg
+│   │   │   └── tooltag-arrowright.svg
+│   │   └── js
+│   │       ├── actions.js
+│   │       ├── admin
+│   │       │   ├── DateTimeShortcuts.js
+│   │       │   └── RelatedObjectLookups.js
+│   │       ├── autocomplete.js
+│   │       ├── calendar.js
+│   │       ├── cancel.js
+│   │       ├── change_form.js
+│   │       ├── core.js
+│   │       ├── dadata_suggestions.js
+│   │       ├── filters.js
+│   │       ├── inlines.js
+│   │       ├── jquery.init.js
+│   │       ├── nav_sidebar.js
+│   │       ├── popup_response.js
+│   │       ├── prepopulate_init.js
+│   │       ├── prepopulate.js
+│   │       ├── SelectBox.js
+│   │       ├── SelectFilter2.js
+│   │       ├── theme.js
+│   │       ├── unusable_password_field.js
+│   │       ├── urlify.js
+│   │       └── vendor
+│   │           ├── jquery
+│   │           │   ├── jquery.js
+│   │           │   ├── jquery.min.js
+│   │           │   └── LICENSE.txt
+│   │           ├── select2
+│   │           │   ├── i18n
+│   │           │   │   ├── af.js
+│   │           │   │   ├── ar.js
+│   │           │   │   ├── az.js
+│   │           │   │   ├── bg.js
+│   │           │   │   ├── bn.js
+│   │           │   │   ├── bs.js
+│   │           │   │   ├── ca.js
+│   │           │   │   ├── cs.js
+│   │           │   │   ├── da.js
+│   │           │   │   ├── de.js
+│   │           │   │   ├── dsb.js
+│   │           │   │   ├── el.js
+│   │           │   │   ├── en.js
+│   │           │   │   ├── es.js
+│   │           │   │   ├── et.js
+│   │           │   │   ├── eu.js
+│   │           │   │   ├── fa.js
+│   │           │   │   ├── fi.js
+│   │           │   │   ├── fr.js
+│   │           │   │   ├── gl.js
+│   │           │   │   ├── he.js
+│   │           │   │   ├── hi.js
+│   │           │   │   ├── hr.js
+│   │           │   │   ├── hsb.js
+│   │           │   │   ├── hu.js
+│   │           │   │   ├── hy.js
+│   │           │   │   ├── id.js
+│   │           │   │   ├── is.js
+│   │           │   │   ├── it.js
+│   │           │   │   ├── ja.js
+│   │           │   │   ├── ka.js
+│   │           │   │   ├── km.js
+│   │           │   │   ├── ko.js
+│   │           │   │   ├── lt.js
+│   │           │   │   ├── lv.js
+│   │           │   │   ├── mk.js
+│   │           │   │   ├── ms.js
+│   │           │   │   ├── nb.js
+│   │           │   │   ├── ne.js
+│   │           │   │   ├── nl.js
+│   │           │   │   ├── pl.js
+│   │           │   │   ├── ps.js
+│   │           │   │   ├── pt-BR.js
+│   │           │   │   ├── pt.js
+│   │           │   │   ├── ro.js
+│   │           │   │   ├── ru.js
+│   │           │   │   ├── sk.js
+│   │           │   │   ├── sl.js
+│   │           │   │   ├── sq.js
+│   │           │   │   ├── sr-Cyrl.js
+│   │           │   │   ├── sr.js
+│   │           │   │   ├── sv.js
+│   │           │   │   ├── th.js
+│   │           │   │   ├── tk.js
+│   │           │   │   ├── tr.js
+│   │           │   │   ├── uk.js
+│   │           │   │   ├── vi.js
+│   │           │   │   ├── zh-CN.js
+│   │           │   │   └── zh-TW.js
+│   │           │   ├── LICENSE.md
+│   │           │   ├── select2.full.js
+│   │           │   └── select2.full.min.js
+│   │           └── xregexp
+│   │               ├── LICENSE.txt
+│   │               ├── xregexp.js
+│   │               └── xregexp.min.js
+│   └── rest_framework
+│       ├── css
+│       │   ├── bootstrap.min.css
+│       │   ├── bootstrap.min.css.map
+│       │   ├── bootstrap-theme.min.css
+│       │   ├── bootstrap-theme.min.css.map
+│       │   ├── bootstrap-tweaks.css
+│       │   ├── default.css
+│       │   ├── font-awesome-4.0.3.css
+│       │   └── prettify.css
+│       ├── docs
+│       │   ├── css
+│       │   │   ├── base.css
+│       │   │   ├── highlight.css
+│       │   │   └── jquery.json-view.min.css
+│       │   ├── img
+│       │   │   ├── favicon.ico
+│       │   │   └── grid.png
+│       │   └── js
+│       │       ├── api.js
+│       │       ├── highlight.pack.js
+│       │       └── jquery.json-view.min.js
+│       ├── fonts
+│       │   ├── fontawesome-webfont.eot
+│       │   ├── fontawesome-webfont.svg
+│       │   ├── fontawesome-webfont.ttf
+│       │   ├── fontawesome-webfont.woff
+│       │   ├── glyphicons-halflings-regular.eot
+│       │   ├── glyphicons-halflings-regular.svg
+│       │   ├── glyphicons-halflings-regular.ttf
+│       │   ├── glyphicons-halflings-regular.woff
+│       │   └── glyphicons-halflings-regular.woff2
+│       ├── img
+│       │   ├── glyphicons-halflings.png
+│       │   ├── glyphicons-halflings-white.png
+│       │   └── grid.png
+│       └── js
+│           ├── ajax-form.js
+│           ├── bootstrap.min.js
+│           ├── coreapi-0.1.1.js
+│           ├── csrf.js
+│           ├── default.js
+│           ├── jquery-3.7.1.min.js
+│           ├── load-ajax-form.js
+│           └── prettify-min.js
+├── tests
+│   ├── devices
+│   │   ├── __pycache__
+│   │   │   ├── test_devicec_models.cpython-312-pytest-8.3.4.pyc
+│   │   │   ├── test_devices_form.cpython-312-pytest-8.3.4.pyc
+│   │   │   ├── test_devices_serializers.cpython-312-pytest-8.3.4.pyc
+│   │   │   ├── test_devices_urls.cpython-312-pytest-8.3.4.pyc
+│   │   │   └── test_devices_views.cpython-312-pytest-8.3.4.pyc
+│   │   ├── test_devicec_models.py
+│   │   ├── test_devices_serializers.py
+│   │   ├── test_devices_urls.py
+│   │   └── test_devices_views.py
+│   └── registration
+│       ├── __pycache__
+│       │   ├── test_register_models.cpython-312-pytest-8.3.4.pyc
+│       │   ├── test_register_serializers.cpython-312-pytest-8.3.4.pyc
+│       │   ├── test_register_urls.cpython-312-pytest-8.3.4.pyc
+│       │   └── test_register_views.cpython-312-pytest-8.3.4.pyc
+│       ├── test_register_models.py
+│       ├── test_register_serializers.py
+│       ├── test_register_urls.py
+│       └── test_register_views.py
+└── tree.txt
+
+78 directories, 448 files

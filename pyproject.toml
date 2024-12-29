@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "app-task-01"
+version = "0.1.0"
+description = "Test case"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.8"
+djangorestframework-simplejwt = "^5.3.1"
+gunicorn = "^23.0.0"
+drf-spectacular = "^0.28.0"
+dadata = "^24.10.0"
+django-cors-headers = "^4.6.0"
+python-dotenv = "^1.0.1"
+pydantic = "^2.10.4"
+pydantic-settings = "^2.7.0"
+django-health-check = "^3.18.3"
+psycopg2-binary = "^2.9.10"
+pytest-asyncio = "^0.25.0"
+pytest-cov = "^6.0.0"
+pytest-django = "^4.9.0"
+pytest-tornasync = "^0.6.0.post2"
+asgiref = "^3.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

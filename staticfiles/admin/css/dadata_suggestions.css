@@ -1,0 +1,22 @@
+
+#id_address {
+    width: 50% !important; 
+    max-width: 600px !important; 
+    min-width: 300px !important;  
+}
+@media (max-width: 768px) {
+    #id_address {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+.form-row .field-address {
+    display: flex;
+    align-items: center;
+}
+
+.form-row .field-address label {
+    margin-right: 10px;
+    min-width: 100px;
+}
