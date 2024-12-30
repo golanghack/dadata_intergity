@@ -19,7 +19,7 @@ class Device(models.Model):
     address = models.CharField(max_length=255, verbose_name=_('Адрес'))
     name = models.CharField(max_length=100, verbose_name=_('Название устройства'))
     ip_address = models.GenericIPAddressField(verbose_name=_('IP-адрес'))
-    author = models.URLField(blank=False, verbose_name=_('Автор'))
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, verbose_name=_('Автор'))
     device_model = models.ForeignKey(DeviceModel, on_delete=models.SET_NULL, null=True, verbose_name=_('Модель устройства'))
     comment = models.TextField(blank=True, verbose_name=_('Комментарий'))
 
